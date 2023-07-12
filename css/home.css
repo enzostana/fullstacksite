@@ -1,0 +1,88 @@
+ol {
+    list-style-type: none;
+}
+
+ol li {
+    cursor: pointer;
+    background: white;
+    padding: 8px 16px;
+    color: black;
+    border-bottom: 1px solid gray;
+}
+
+.olcentralize {
+    display: center;
+    justify-content: center;
+    align-items: center;
+    font: 16px Arial;
+}
+
+ol li.jpg {
+    
+    padding-left: 220px;
+    /* Adiciona um espaçamento à esquerda para acomodar a imagem */
+    background-image: url('../img/userperf.png');
+    /* Caminho para sua imagem */
+    background-repeat: no-repeat;
+    /* Evita que a imagem seja repetida */
+    background-position: left center;
+    /* Posiciona a imagem à esquerda no centro vertical */
+    background-size: 200px ;
+    /* Define o tamanho da imagem */
+    border-left: 20px solid transparent;
+    border-radius: 25px;
+}
+
+ol li:hover {
+    opacity: 0.8;
+    touch-action: pan-x;
+}
+
+p {
+    margin: 4px 0;
+    ;
+}
+
+.barra {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 30px;
+}
+
+.btn {
+    height: 25px;
+    border: 1px;
+    border-right: none;
+    border-radius: 3px 0px 0px 3px;
+    width: 70px;
+}
+
+.btn,
+.edit:hover {
+    border: 2px solid #18c026;
+}
+
+.camp {
+    padding-left: 2%;
+    height: 25px;
+    border: 1px solid #18c026;
+    border-left: none;
+    border-radius: 0px 3px 3px 0px;
+    width: 300px;
+}
+
+.edit {
+    height: 25px;
+    border: 1px;
+    border-right: none;
+    border-radius: 25px;
+    width: 100px;
+}
+
+#transactions,
+#dadoshome {
+    height: auto;
+    width: 70%;
+    margin: 0 auto;
+}

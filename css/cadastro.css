@@ -1,0 +1,150 @@
+/* ------------------------------Formulários-----------------------------*/
+/*--------------------Estilo aba--------------------*/
+.tab {
+    display: flex;
+    width: 340px;
+    background-color: transparent;
+    border: 1px solid #18c026;
+    border-radius: 0px 15px 0px 15px;
+    border-radius: 3px;
+    float: left;
+}
+
+.tab button {
+    background-color: #f4f2ec;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 16px;
+    font-weight: bold;
+    float: left;
+}
+
+.tab button:hover {
+    background-color: #78e782;
+}
+
+/*Tab ativa*/
+.tab button.ativo {
+    background-color: #18c026;
+    color: #313030;
+}
+
+/*--------------------Fim Estilo Aba--------------------*/
+/*--------------------Conteudo + Campos--------------------*/
+.geral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll {
+    overflow-y: scroll;
+}
+
+.area-login {
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadastroelogin {
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #18c026;
+    border-radius: 5px;
+    width: 340px;
+    padding: 20px;
+}
+
+.entrar {
+    font: 3em xx-large;
+    color: #18c026;
+    margin: 0%;
+}
+
+.imgtexto {
+    border: 0px#18c026 solid;
+    display: flex;
+    flex-wrap: wrap;
+    width: 650px;
+    height: 620px;
+    padding: 10px;
+}
+
+.campos {
+    padding-left: 2%;
+    height: 25px;
+    border: 1px solid #18c026;
+    border-radius: 3px;
+    width: 300px;
+}
+.busca {
+    padding-left: 2%;
+    height: 25px;
+    border: 1px solid #18c026;
+    border-radius: 3px;
+    width: 150px;
+}
+
+.labels {
+    padding-left: 1%;
+    font: 12px "Arial";
+    color: #feffff;
+}
+
+.error {
+    font: 12px "Arial";
+    background-color: #18c026 ;
+    display: none;
+}
+
+.termos {
+    padding: 0px;
+    font: 12px "Arial";
+    height: auto;
+}
+
+.termos1 {
+    position: relative;
+    font: 12px "Arial";
+    border: 3px solid #18c026;
+    width: 900px;
+    border-radius: 5px;
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+a {
+    color: #18c026;
+}
+
+/*--------------------Fim CC--------------------*/
+/*--------------------Estilo btn inscrever-se--------------------*/
+.inscreva-se {
+    background-color: transparent;
+    color: white;
+    padding: 5px 35px;
+    font-size: 22px;
+    cursor: pointer;
+    border: 1px solid #18c026;
+    border-radius: 5px;
+    width: 260px;
+    margin-bottom: 5px;
+
+}
+
+.inscreva-se:hover {
+    color: #18c026;
+}
+
+button[disabled] {
+    opacity: 0.5;
+}
+
+:hover[disabled] {
+    color: #ec6f09f1;
+}

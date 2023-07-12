@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/simbol.png" type="image/x-icon">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+
+    <title>VitalAge</title>
+</head>
+
+<body>
+    <img src="assets/img/shape-bg.png" alt="" class="shape__bg">
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img href="index.html" src="assets/img/logo.png" alt="logo image">
+                VitalAge
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="home.html" class="nav__link">Login</a>
+                    </li>
+                </ul>
+
+                <!-- Close button -->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+                <img src="assets/img/nav-bat.png" alt="" class="nav__img">
+            </div>
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-4-line"></i>
+            </div>
+        </nav>
+    </header>
+    <!--==================== MAIN ====================-->
+    <main class="geral ">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="shape__small"></div>
+            <div class="shape__big"></div>
+            <div class="home__container container grid">
+
+                <div id="cadastro">
+                    <div class="home__title">
+                        <span>Edite suas informações</span>
+                    </div>
+                    <br>
+                    <div class="geral scroll">
+                        <div class="area-login">
+                            <div class="cadastroelogin altcadastro">
+                                <form>
+                                    <div id='profissional' class="conteudo"><!--Começo div Profissional-->
+                                        <label class="labels">Nome *</label></br>
+                                        <input name="Nome" class="campos" placeholder="Nome Completo" maxlength="45"
+                                            id="nome" onchange="onChangeNOME()"></br>
+                                        <div class="error" id="nome-required-error">Nome é obrigatório</div>
+                                        <label class="labels padleft">Sexo *</label></br>
+                                        <select name="Sexo" class="campos" id="sexo">
+                                            <option>-- Selecione --</option>
+                                            <option value="Masculino">Masculino</option>
+                                            <option value="Feminino">Feminino</option>
+                                        </select></br>                        
+                                        <label class="labels">CNPJ *</label></br>
+                                        <input name="CNPJ" class="campos" placeholder="CNPJ" maxlength="14" id="cnpj"
+                                            onchange="onChangeCNPJ()"></br>
+                                        <div class="error" id="cnpj-required-error">CNPJ é obrigatório.</div>
+                                        <label class="labels">Endereço </label>
+                                        <input name="Endereço" class="campos" placeholder="Endereço completo"
+                                            id="endereco"></br>
+                                        <label class="labels"> UF *</label></br>
+                                        <select name="UF" class="campos" id="estado">
+                                            <option value="Não selecionado"></option>
+                                            <option value="Roraima">RR</option>
+                                            <option value="Amapá">AP</option>
+                                            <option value="Amazonas">AM</option>
+                                            <option value="Pará">PA</option>
+                                            <option value="Acre">AC</option>
+                                            <option value="Rondônia">RO</option>
+                                            <option value="Tocantins">TO</option>
+                                            <option value="Maranhão">MA</option>
+                                            <option value="Piauí">PI</option>
+                                            <option value="Ceará">CE</option>
+                                            <option value="Rio Grande do Norte">RN</option>
+                                            <option value="Paraíba">PB</option>
+                                            <option value="Pernambuco">PE</option>
+                                            <option value="Alagoas">AL</option>
+                                            <option value="Sergipe">SE</option>
+                                            <option value="Bahia">BA</option>
+                                            <option value="Mato Grosso">MT</option>
+                                            <option value="Distrito Federal">DF</option>
+                                            <option value="Goiás">GO</option>
+                                            <option value="Mato Grosso do Sul">MS</option>
+                                            <option value="Minas Gerais">MG</option>
+                                            <option value="Espirito Santo">ES</option>
+                                            <option value="Rio de Janeiro">RJ</option>
+                                            <option value="São Paulo">SP</option>
+                                            <option value="Paraná">PR</option>
+                                            <option value="Santa Catarina">SC</option>
+                                            <option value="Rio Grande do Sul">RS</option>
+                                        </select></br>
+                                        <label class="labels">Telefone</label>
+                                        <input name="Telefone_de_contato" type="text" maxlength="15"
+                                            pattern="\(\d{2}\)\s*\d{5}-\d{4}" class="campos"
+                                            placeholder="Telefone de Contato" id="telefone" /></br>
+                                        <label class="labels">Profissão *</label></a>
+                                        <select class="campos" name="Profissão" id="profissao">
+                                            <option value="Cuidador">Cuidador</option>
+                                            <option value="Nutricionista">Nutricionista</option>
+                                            <option value="Transporte adaptado">Transporte adaptado</option>
+                                            <option value="Fisioterapeuta">Fisioterapeuta</option>
+                                            <option value="Fonoaudiólogo">Fonoaudiólogo</option>
+                                            <option value="Psicólogo">Psicólogo</option>
+                                        </select>
+                                        <label class="labels">Registro Profissional *</label></br>
+                                        <input name="registro" id="registro" class="campos"
+                                            placeholder="Ex:Coren-XX 102043-XXX." maxlength="35">
+                                        <label class="labels">Modalidade de Trabalho *</label></a>
+                                        <select class="campos" name="modtrab" id="modtrab">
+                                            <option value="Consulta">Consulta:</option>
+                                            <option value="Hora">Hora:</option>
+                                            <option value="Diária">Diária:</option>
+                                            <option value="Semanal">Semanal:</option>
+                                            <option value="Quinzena">Quinzena:</option>
+                                            <option value="Mensalidade">Mensalidade:</option>
+                                            <option value="Valor Mínimo">Valor Mínimo:</option>
+                                        </select>
+                                        <label class="labels">Valor: </label>
+                                        <input name="money" type="text" class="campos"
+                                            placeholder="Valor do seu serviço" id="money" /></br>
+                                        <label class="labels">Apresentação: </label>
+                                        <input name="descricao" type="text" class="campos"
+                                            placeholder="Escreva uma breve apresentação" id="descricao" /></br>
+                                        </br></br>
+                                        <center>
+                                                <button type="button" class="inscreva-se" onclick="updateuser()"
+                                                    disabled="true" id="register-button"><b>Atualizar</b></button>
+                                            </div>
+                                        </center>
+                                        </p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="shape__small"></div>
+        <div class="shape__big"></div>
+        <div>
+            <div class="footer__container container grid">
+                <div>
+                    <a href="#" class="footer__logo">
+                        <img src="assets/img/logo.png" alt="Logo image">
+                        VitalAge
+                    </a>
+
+                    <p class="footer__description">
+                        Envie o seu feedback<br>
+                        na aba contato!
+                    </p>
+                </div>
+
+                <div class="footer__content">
+                    <div>
+                        <h3 class="footer__title">Endereço</h3>
+
+                        <ul class="footer__links">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.5164196547075!2d-43.31044802532657!3d-22.7833208334689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x990add907a0ad7%3A0x248c02f75dc2a385!2sSENAI%20Caxias!5e0!3m2!1spt-BR!2sbr!4v1687205352104!5m2!1spt-BR!2sbr"
+                                width="300" height="200" style="border: 3px;;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="footer__title">Mídia social</h3>
+
+                        <ul class="footer__social">
+                            <a href="https://www.facebook.com/vitalage" target="_blank" class="footer__social-link">
+                                <i class="ri-facebook-circle-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/vitalage" target="_blank" class="footer__social-link">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                            <a href="https://twitter.com/vitalage" target="_blank" class="footer__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="footer__copy">
+            &#169; Copyright VitalAge. All rights reserved
+        </span>
+    </footer>
+
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+    <!--<script src="assets/js/loginvalidate.js"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="assets/js/auth-guard.js"></script>
+    <script src="assets/js/home.js"></script>
+
+</body>
+
+</html>

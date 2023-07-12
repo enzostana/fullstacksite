@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/simbol.png" type="image/x-icon">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+
+    <title>Login</title>
+</head>
+
+<div id="loading" class="loading centralize">
+    <label>Carregando...</label>
+</div>
+
+<body>
+    <img src="assets/img/shape-bg.png" alt="" class="shape__bg">
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/img/logo.png" alt="logo image">
+                VitalAge
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="Profissionais.html" class="nav__link ">Profissionais</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#party" class="nav__link">Contato</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="login.html" class="nav__link active-link">Login</a>
+                        <button type="button" class="nav__link" onclick="logout()">Sair</button>
+                    </li>
+                </ul>
+
+                <!-- Close button -->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+                <img src="assets/img/nav-bat.png" alt="" class="nav__img">
+            </div>
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-4-line"></i>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="shape__small"></div>
+            <div class="shape__big"></div>
+            <div class=" area-login geral">
+                <div class="cadastroelogin">
+                    <form>
+                        <div>
+                            <center>
+                                <h1 class="entrar">Login</h1>
+                            </center>
+                        </div>
+                        <div>
+                            <label for="email" class="labels">E-mail:</label></br>
+                            <input id="email" type="email" class="campos" placeholder="usuario@email.com"
+                                onchange="onChangeEmail()" maxlength="60" required/>
+                            <div class="error" id="email-required-error">Email é obrigatório</div>
+                            <div class="error" id="email-invalid-error">Email é inválido</div>
+                        </div>
+                        <br>
+                        <div>
+                            <label class="labels">Senha:</label></br>
+                            <input id="password" name="senha" type="password" class="campos"
+                                placeholder="Digite sua senha" onchange="onChangePassword()" maxlength="40" required />
+                            <div class="error" id="password-required-error">Senha é obrigatória</div>
+                        </div>
+                        <center>
+                            </br>
+                            <button type="button" class="inscreva-se" id="recover-password-button"
+                                onclick="recoverPassword()" disabled="true"><b>Recuperar Senha</b></button></p>
+                            <button type="button" class="inscreva-se" id="login-button" disabled="true"
+                                onclick="login()"><b>Entrar</b></button></br>
+                            <button type="button" class="inscreva-se" onclick="register()"><b>Registrar</b></button>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="shape__small"></div>
+            <div class="shape__big"></div>
+            <div class="footer__container container grid">
+                <div>
+                    <a href="#" class="footer__logo">
+                        <img src="assets/img/logo.png" alt="Logo image">
+                        VitalAge
+                    </a>
+
+                    <p class="footer__description">
+                        Envie o seu feeedback<br>
+                        na aba contato!
+                    </p>
+                </div>
+
+                <div class="footer__content">
+                    <div>
+                        <h3 class="footer__title">Endereço</h3>
+
+                        <ul class="footer__links">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.5164196547075!2d-43.31044802532657!3d-22.7833208334689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x990add907a0ad7%3A0x248c02f75dc2a385!2sSENAI%20Caxias!5e0!3m2!1spt-BR!2sbr!4v1687205352104!5m2!1spt-BR!2sbr"
+                                width="300" height="200" style="border: 3px;;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="footer__title">Mídia social</h3>
+
+                        <ul class="footer__social">
+                            <a href="https://www.facebook.com/vitalage" target="_blank" class="footer__social-link">
+                                <i class="ri-facebook-circle-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/vitalage" target="_blank" class="footer__social-link">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                            <a href="https://twitter.com/vitalage" target="_blank" class="footer__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <span class="footer__copy">
+                &#169; Copyright VitalAge. All rights reserved
+            </span>
+        </footer>
+
+        <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line"></i>
+        </a>
+
+        <!--=============== SCROLLREVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        <!--<script src="assets/js/register.js"></script>-->
+        <script src="assets/js/loading.js"></script>
+        <script src="assets/js/main.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+        <script src="assets/js/firebase.js"></script>
+        <script src="assets/js/loginvalidate.js"></script>
+    </main>
+
+</body>
+
+
+</html>
